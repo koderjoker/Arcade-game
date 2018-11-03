@@ -116,9 +116,9 @@ document.addEventListener('keyup', function(e) {
 // Instantiate objects
 
 // Place all enemy objects in an array called allEnemies
-var allEnemies = [];
+let allEnemies = [];
 
 // Place the player object in a variable called player
-var player = new Player(202.5, 383, 50);
+let player = new Player(202.5, 383, 50);
 
 restartGame();
