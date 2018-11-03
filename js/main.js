@@ -56,7 +56,7 @@ Player.prototype.render = function() {
 // Receive key which was pressed and move the player according to that input
 Player.prototype.handleInput = function(allowedKey) {
   // Moves the player to the left
-  if (allowedKey =='left' && this.x-this.speed>0) {
+  if (allowedKey=='left' && this.x-this.speed>0) {
     this.x = this.x - this.speed;
   }
   // Moves the player to the right
@@ -78,7 +78,7 @@ Player.prototype.handleInput = function(allowedKey) {
     }
   }
   // Moves the player downwards
-  else if (allowedKey== 'down' && this.y+this.speed<400) {
+  else if (allowedKey=='down' && this.y+this.speed<400) {
     this.y = this.y + this.speed;
   }
 }
