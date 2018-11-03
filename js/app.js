@@ -11,16 +11,16 @@ const Enemy = function(x, y, speed) {
 
 // Update enemy's position
 // Parameter: dt, a time delta between ticks
-// To ensure the game runs at the same speed for all computers.
+// To ensure the game runs at the same speed for all computers
 Enemy.prototype.update = function(dt) {
   // Update enemy location
   this.x += this.speed * dt;
   // Handle collision with player
-  if (player.x < this.x + 70 &&
-      player.x + 70 > this.x &&
-      player.y < this.y + 50 &&
-      player.y + 50 > this.y) {
-      restartGame();
+  if (player.x < this.x+70 &&
+      player.x+70 > this.x &&
+      player.y < this.y+50 &&
+      player.y+50 > this.y) {
+    restartGame();
   }
   // If enemy runs off board
   if (this.x >= 505) {
@@ -105,10 +105,10 @@ function restartGame() {
 // Listens for key presses and sends the keys to Player.handleInput()
 document.addEventListener('keyup', function(e) {
   const allowedKeys = {
-      37: 'left',
-      38: 'up',
-      39: 'right',
-      40: 'down'
+    37: 'left',
+    38: 'up',
+    39: 'right',
+    40: 'down'
   };
   player.handleInput(allowedKeys[e.keyCode]);
 });
